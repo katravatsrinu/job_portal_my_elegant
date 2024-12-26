@@ -1,0 +1,178 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.center {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.stack-area {
+  width: 100%;
+  height: 300vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.right,
+.left {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  box-sizing: border-box;
+  flex-basis: 50%;
+}
+
+.cards {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card {
+  width: 350px;
+  height: 350px;
+  box-sizing: border-box;
+  padding: 35px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: 0.5s ease-in-out;
+  border: none;
+  color: white;
+}
+
+.card:nth-child(1) {
+  background: #2c3e50;
+  z-index: 4;
+}
+
+.card:nth-child(2) {
+  background: #34495e;
+  z-index: 3;
+}
+
+.card:nth-child(3) {
+  background: #2980b9;
+  z-index: 2;
+}
+
+.card:nth-child(4) {
+  background: #3498db;
+  z-index: 1;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.sub {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ecf0f1;
+}
+
+.content {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 20px 0;
+}
+
+.user-info {
+  margin-top: auto;
+  text-align: left;
+}
+
+.company {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: 5px;
+}
+
+.card.active {
+  transform-origin: bottom left;
+}
+
+.left {
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 420px;
+  margin-bottom: 30px;
+}
+
+.sub-title {
+  max-width: 420px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.top,
+.bottom {
+  width: 100%;
+  height: 100vh;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+  .stack-area {
+    flex-direction: column;
+  }
+  
+  .left {
+    position: relative;
+    height: auto;
+    padding: 40px 20px;
+  }
+  
+  .title {
+    font-size: 40px;
+  }
+  
+  .card {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .content {
+    font-size: 20px;
+  }
+}

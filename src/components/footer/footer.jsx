@@ -57,9 +57,9 @@ const Footer = () => {
           <div className="col-md-4">
             <h5>Touch With Us</h5>
             <ul className="list-unstyled">
-              <li><i className="bi bi-geo-alt"></i> Location: Real Estate Hub, City Center</li>
-              <li><i className="bi bi-phone"></i> Mobile: +1234567890</li>
-              <li><i className="bi bi-envelope"></i> Email: info@jobArea.com</li>
+              <li><i className="bi bi-geo-alt"></i> Location: Hitech City Real Estate Hub, City Center</li>
+              <li><i className="bi bi-phone"></i> Mobile: +91 1234567890</li>
+              <li><i className="bi bi-envelope"></i> Email: realestatejobs@jobArea.com</li>
               <li><i className="bi bi-globe"></i> Website: www.realestatejobs.com</li>
             </ul>
           </div>

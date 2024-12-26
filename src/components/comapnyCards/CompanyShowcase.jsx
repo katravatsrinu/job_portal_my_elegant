@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Building2 } from 'lucide-react';
 import CompanyCard from './CompanyCard';
 import Carousel from './carousel';
-import { companies } from '../data/companies';
+import { companies } from '../../data/companies';
 
 const COMPANIES_PER_SLIDE = 3;
 

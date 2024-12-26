@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import './JobList.css';
+import "../jobLists/jobList.css"
 import { MdOutlineSell, MdGroups, MdTrendingUp, MdOutlineCalculate, MdOutlineCorporateFare, MdPublic, MdOutlineVerifiedUser } from "react-icons/md";
 
 gsap.registerPlugin(ScrollTrigger);

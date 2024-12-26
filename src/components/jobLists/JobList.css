@@ -12,7 +12,7 @@
   }
   
   /* Global Styles */
-  body {
+  .job-list-section {
     background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     color: var(--text-color);
     font-family: "Arial", sans-serif;
