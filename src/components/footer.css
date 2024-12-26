@@ -1,0 +1,52 @@
+footer {
+    background-color: #343a40; /* Dark background */
+    color: #ffffff !important;
+    padding: 3rem 0; /* Add padding */
+  }
+  
+  footer h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  footer ul {
+    padding-left: 0;
+  }
+  
+  footer ul li {
+    margin-bottom: 15px;
+  }
+  
+  footer .social-icons a {
+    font-size: 1.75rem; /* Larger icons */
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin-right: 15px;
+  }
+  
+  footer .social-icons a:hover {
+    transform: scale(1.2); /* Slightly bigger scale */
+    color: #f0f0f0; /* Lighter color on hover */
+  }
+  
+  /* Adjust layout for smaller screens */
+  @media (max-width: 768px) {
+    .footer-section {
+      text-align: center; /* Center text */
+      margin-bottom: 2rem;
+    }
+  
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+  
+    .social-icons a {
+      margin-right: 10px; /* Smaller spacing */
+      font-size: 1.5rem; /* Smaller icons on mobile */
+    }
+  
+    footer .col-md-4 {
+      margin-bottom: 2rem; /* Add spacing between sections */
+    }
+  }
+  

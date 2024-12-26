@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.hero-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.hero-image {
+    object-fit: cover; /* Ensures the image covers the entire div */
+    height: 100%;
+    width: 100%;
+    filter: brightness(0.7) contrast(1.2); /* Optional styling for brightness and contrast */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10; /* Ensures text is above the image */
+}
+
+.hero-content h1 {
+    font-family: 'Bebas Neue', sans-serif; /* Use Bebas Neue font */
+    font-size: 6rem; /* Large title size */
+    line-height: 1; /* Close line spacing for compact look */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #00ff00; /* Neon green */
+    /* text-shadow: 0 0 10px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.6);  */
+    margin: 0; /* Remove default margin */
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 4.5rem; /* Adjust size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3.5rem; /* Adjust size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem; /* Adjust size for mobile */
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+}

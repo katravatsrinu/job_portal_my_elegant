@@ -1,0 +1,99 @@
+/* Navbar Styles */
+.navbar.custom-navbar {
+  background-color: #1a1a2e !important; /* Default background color matching the hero section */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2) !important;
+  position: sticky !important; /* Make the navbar sticky */
+  top: 0 !important; /* Stick to the top */
+  z-index: 1000 !important; /* Ensure navbar stays on top */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out !important; /* Smooth transition */
+}
+
+.navbar-white {
+  background-color: #ffffff !important; /* White background when scrolling up */
+  color: #000000 !important; /* Change text and icon color to black */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important; /* Lighter box-shadow on white background */
+}
+
+/* Brand Text */
+.navbar-brand.brand-text {
+  color: #ffffff !important; /* White text for brand */
+  font-size: 1.8rem !important;
+  font-weight: bold !important;
+}
+
+.navbar-white .navbar-brand.brand-text {
+  color: #000000 !important; /* Black text on white navbar */
+}
+
+/* Navbar Links */
+.nav-link.nav-link-custom {
+  color: #ffffff !important; /* White text for links */
+  margin-left: 1rem !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.navbar-white .nav-link.nav-link-custom {
+  color: #000000 !important; /* Black text on white navbar */
+}
+
+/* Hover Effect */
+.nav-link.nav-link-custom:hover {
+  color: #00aaff !important; /* Dark Sky Blue */
+  text-decoration: underline !important;
+  animation: hoverBounce 0.5s ease-in-out;
+}
+
+.navbar-white .nav-link.nav-link-custom:hover {
+  color: #00aaff !important; /* Sky Blue on hover when navbar is white */
+}
+
+/* Profile Dropdown Styles */
+.profile-dropdown {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  background-color: #f5f5f5 !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+}
+
+.profile-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.placeholder-icon {
+  color: #1a1a2e !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+}
+
+/* Menu Icon Style */
+.navbar-toggler-icon {
+  background-color: #ffffff !important; /* White menu icon */
+  transition: transform 0.3s ease, background-color 0.3s ease !important;
+}
+
+/* Menu Icon Click Animation */
+.navbar-toggler.collapsed .navbar-toggler-icon {
+  transform: rotate(90deg) !important; /* Rotate icon when clicked */
+  background-color: #00aaff !important; /* Change color on click */
+}
+
+/* Keyframe for Hover Animation */
+@keyframes hoverBounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,226 @@
+/* Variables */
+:root {
+    --primary: #6366f1;
+    --secondary: #4f46e5;
+    --dark: #1e1b4b;
+    --light: #ffffff;
+    --text-color: #1f2937;
+    --gradient-start: #391b4b;
+    --gradient-end: #312e81;
+    --button-gradient-start: #e7d03b;
+    --button-gradient-end: #832c97;
+  }
+  
+  /* Global Styles */
+  body {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: var(--text-color);
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .icon-wrapper {
+    padding: 12px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(79, 70, 229, 0.1));
+    border-radius: 14px;
+    color: #6366f1; /* Ensure the icon is visible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.4s ease; /* Add transition for hover effect */
+  }
+  
+  /* Hover effect for icon */
+  .job-card:hover .icon-wrapper {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--light);
+    transform: rotate(15deg) scale(1.1);
+  }
+  
+  /* Section Styles */
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--light) !important; /* Change title color to white */
+    background: linear-gradient(135deg, var(--light), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  #card-description:hover {
+    color: white !important;
+  }
+  
+  .section-subtitle {
+    color: #f1f2f4;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Job Cards */
+  .job-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Reduced gap between card content */
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 1rem auto;
+    max-width: 90%;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .job-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  }
+  
+  .job-card:hover {
+    transform: translateY(-8px);
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(15px);
+    color: var(--light);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+  .job-card:hover .icon-wrapper {
+    transform: rotate(360deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .job-card:hover .text-muted {
+    color: var(--light) !important;
+  }
+  
+  .job-card:hover .badge {
+    color: var(--light); /* Change badge text color if needed */
+  }
+  
+  .job-card:hover .btn-outline-primary {
+    color: var(--light);
+    border-color: var(--light);
+  }
+  
+  .job-card .icon-wrapper {
+    transition: transform 0.3s ease; /* Smooth rotation transition */
+  }
+  
+  /* Change all text (title, description, positions) color to white on hover */
+  .job-card:hover .card-title,
+  .job-card:hover .card-description,
+  .job-card:hover .card-positions {
+    color: var(--light) !important;
+  }
+  
+  /* Apply button styles */
+  .btn-outline-primary {
+    background: linear-gradient(135deg, var(--button-gradient-start), var(--button-gradient-end));
+    color: var(--light);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn-outline-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Icon Styles */
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(79, 70, 229, 0.1));
+    border-radius: 50%;
+    color: var(--primary);
+    font-size: 24px;
+    transition: all 0.4s ease;
+  }
+  
+  /* Restyle job card text */
+  .card-title,
+  .card-description,
+  .card-positions {
+    transition: color 0.3s ease; /* Add smooth transition for color change */
+  }
+  
+  /* Row gap - Reduce the gap between cards */
+  .row {
+    margin-left: -1rem; /* Adjust for tighter spacing */
+    margin-right: -1rem; /* Adjust for tighter spacing */
+  }
+  
+  /* Responsive Styles - Adjust card gaps on smaller screens */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+    .section-subtitle {
+      font-size: 1rem;
+    }
+    .job-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .icon-wrapper {
+      margin-bottom: 1rem;
+    }
+  
+    /* Reduce row margin for smaller screens */
+    .row {
+      margin-left: -0.5rem; /* Less gap on smaller screens */
+      margin-right: -0.5rem; /* Less gap on smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .section-title {
+      font-size: 1.8rem;
+    }
+    .section-subtitle {
+      font-size: 0.9rem;
+    }
+    .job-card {
+      max-width: 95%;
+    }
+    .card-title {
+      font-size: 1.25rem;
+    }
+    .card-description {
+      font-size: 0.95rem;
+    }
+    .card-positions {
+      font-size: 0.8rem;
+    }
+  
+
+    .row {
+      margin-left: -0.25rem; 
+      margin-right: -0.25rem; /* Minimal gap for mobile screens */
+    }
+  }
+  
