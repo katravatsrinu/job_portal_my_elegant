@@ -29,6 +29,7 @@ footer {
     color: #f0f0f0; /* Lighter color on hover */
   }
   
+  
   /* Adjust layout for smaller screens */
   @media (max-width: 768px) {
     .footer-section {

@@ -11,6 +11,7 @@
     height: 100%;
     width: 100%;
     filter: brightness(0.7) contrast(1.2); /* Optional styling for brightness and contrast */
+    transition: all 0.3s ease; /* Smooth transition for resizing */
 }
 
 .hero-content {
@@ -29,7 +30,6 @@
     font-weight: bold;
     text-transform: uppercase;
     color: #00ff00; /* Neon green */
-    /* text-shadow: 0 0 10px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.6);  */
     margin: 0; /* Remove default margin */
 }
 
@@ -39,23 +39,72 @@
     margin-top: 20px;
 }
 
-/* Responsive Styling */
+/* Carousel styling */
+.carousel-control-prev, .carousel-control-next {
+    display: block;
+}
+
+/* Hide carousel controls on small screens */
+@media (max-width: 768px) {
+    .carousel-control-prev, .carousel-control-next {
+        display: none !important;
+    }
+}
+
+/* Responsive Styling for different screen sizes */
+
+/* Large screens (desktops) */
+@media (min-width: 1025px) {
+    .hero-content h1 {
+        font-size: 6rem; /* Larger title size for large screens */
+    }
+}
+
+/* Tablets and mid-sized screens */
 @media (max-width: 1024px) {
     .hero-content h1 {
         font-size: 4.5rem; /* Adjust size for tablets */
     }
+    .hero-content p {
+        font-size: 1.2rem;
+    }
 }
 
+/* Smaller devices (mobile) */
 @media (max-width: 768px) {
+    .hero-section {
+        height: auto; /* Adjust height to fit the content */
+    }
+
+    .hero-image {
+        object-fit: cover;
+        height: 50vh; /* Set height to 50% of viewport height on small screens */
+        width: 100%;
+    }
+
     .hero-content h1 {
         font-size: 3.5rem; /* Adjust size for smaller screens */
     }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        display: none !important; /* Hide carousel controls on mobile */
+    }
 }
 
+/* Extremely small devices (small mobile) */
 @media (max-width: 480px) {
+    .hero-image {
+        height: 50vh; /* Maintain height adjustment for very small screens */
+    }
+
     .hero-content h1 {
         font-size: 2.5rem; /* Adjust size for mobile */
     }
+
     .hero-content p {
         font-size: 1rem;
     }

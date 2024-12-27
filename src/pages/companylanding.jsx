@@ -11,12 +11,15 @@ import Footer from "../components/footer/footer";
 const CompanyLanding=()=>{
     return(
         <>
+            <div style={{ boxSizing: 'border-box', width: '100%', height: '100%' }}>
+
         <NavBar2 />
         <HeroSection2 />
         <CompanyShowcase />
         <JobList2 />
         <Testimonials />
         <Footer />
+        </div>
         </>
     )
 }

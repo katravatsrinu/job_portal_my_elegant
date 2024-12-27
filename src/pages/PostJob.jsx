@@ -184,14 +184,23 @@ const Jobpost = () => {
         />
       </div>
       <div>
-        <label>Skill:</label>
-        <input
-          type="text"
-          name="Skill"
-          value={formData.Skill}
-          onChange={handleChange}
-        />
-      </div>
+  <label>Skill:</label>
+  <select
+    name="Skill"
+    value={formData.Skill}
+    onChange={handleChange}
+  >
+    <option value="">Select a skill</option>
+    <option value="Head of Sales">Head of Sales</option>
+    <option value="Channel Partner">Channel Partner</option>
+    <option value="Sales Executives">Sales Executives</option>
+    <option value="HR & Operations">HR & Operations</option>
+    <option value="C.E.O/Directors">C.E.O/Directors</option>
+    <option value="Marketing">Marketing</option>
+    <option value="Digital">Digital</option>
+    <option value="Accounts">Accounts</option>
+  </select>
+</div>
     </div>
   );
 

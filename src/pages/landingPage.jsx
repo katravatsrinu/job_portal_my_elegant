@@ -10,21 +10,17 @@ import Testimonials from '../components/testimonial/testimonial';
 import Footer from '../components/footer/footer'
 
 
-
-
-
-
-
 const LandingPage = () => {
   return (
     <>
+    <div style={{ boxSizing: 'border-box', width: '100%', height: '100%' }}>
       <NavBar />
       <HeroSection />
       <CompanyShowcase />
       <JobList />
       <Testimonials />
       <Footer />
-      
+      </div>
      
     </>
   

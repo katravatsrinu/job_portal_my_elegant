@@ -9,6 +9,7 @@ import CompanyLanding from './pages/companylanding';
 import PricingPage from './pages/pricingPage';
 import Jobpost from './pages/PostJob';
 import AllJobs from './pages/jobs/jobsSection';
+import EditProfileForm from './pages/editProfile';
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/premium" element={<PricingPage/>}  />
         <Route path="/postJob" element={<Jobpost />}  />
         <Route path="/jobs" element={<AllJobs />}  />
+        <Route path="/editProfile" element={<EditProfileForm />}  />
 
 
       

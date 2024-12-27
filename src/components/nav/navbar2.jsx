@@ -11,6 +11,8 @@ const NavBar2 = () => {
   const [lastScrollY, setLastScrollY] = useState(0); // Track last scroll position
   const [scrollingUp, setScrollingUp] = useState(false); // Track if user is scrolling up
 
+  const token = localStorage.getItem("token")
+
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -83,7 +85,10 @@ const NavBar2 = () => {
               </Form.Group>
               <NavDropdown.Item href="#profile">View Profile</NavDropdown.Item>
               <NavDropdown.Item href="#settings">Settings</NavDropdown.Item>
-              <NavDropdown.Item href="#logout">Logout</NavDropdown.Item>
+              <NavDropdown.Item href="#logout" onClick={()=>{
+                localStorage.clear()
+                window.location.reload();
+              }}>Logout</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
