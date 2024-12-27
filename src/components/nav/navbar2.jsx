@@ -5,14 +5,11 @@ import { Link } from 'react-router-dom';
 
 
 
-const NavBar = () => {
+const NavBar2 = () => {
   const [profileImage, setProfileImage] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0); // Track last scroll position
   const [scrollingUp, setScrollingUp] = useState(false); // Track if user is scrolling up
-
-
-  const token = localStorage.getItem("token")
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
@@ -57,10 +54,10 @@ const NavBar = () => {
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto align-items-center">
             {/* Menu Options */}
-            <Nav.Link href="#jobs" className="nav-link-custom"><Link to="/Jobs">Jobs</Link></Nav.Link>
-           {token? "":
-           <><Nav.Link href="#login" className="nav-link-custom"><Link to="/applicantlogin" style={{textDecoration:"none",color:"#fff"}}>ApplicantLogin</Link></Nav.Link>
-            <Nav.Link href="#company-register" className="nav-link-custom"><Link to="/companylogin" style={{textDecoration:"none",color:"#fff"}}>Become a Partner</Link></Nav.Link></>}
+            <Nav.Link href="#jobs" className="nav-link-custom">Home </Nav.Link>
+            <Nav.Link href="#login" className="nav-link-custom"><Link to="/PostJob" style={{textDecoration:"none",color:"#fff"}}>Post Jobs</Link></Nav.Link>
+            <Nav.Link href="#register" className="nav-link-custom">Companies</Nav.Link>
+            <Nav.Link href="#company-register" className="nav-link-custom"><Link to="/premium" style={{textDecoration:"none",color:"#fff"}}>Premium</Link></Nav.Link>
 
             {/* Profile Dropdown */}
             <NavDropdown
@@ -86,12 +83,7 @@ const NavBar = () => {
               </Form.Group>
               <NavDropdown.Item href="#profile">View Profile</NavDropdown.Item>
               <NavDropdown.Item href="#settings">Settings</NavDropdown.Item>
-              <NavDropdown.Item href="#logout" onClick={()=>{
-                localStorage.clear()
-                // Reload the page
-window.location.reload();
-
-              }}>Logout</NavDropdown.Item>
+              <NavDropdown.Item href="#logout">Logout</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -100,4 +92,4 @@ window.location.reload();
   );
 };
 
-export default NavBar;
+export default NavBar2;

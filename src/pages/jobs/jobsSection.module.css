@@ -1,0 +1,68 @@
+/* jobsSection.css */
+
+/* Job List Container */
+.job-list {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 10px;
+  }
+  
+  /* Glassy Gradient Cards */
+  .job-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(240, 240, 240, 0.5));
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  
+  .job-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+  }
+  
+  .job-card.active {
+    background: linear-gradient(145deg, rgba(0, 153, 255, 0.8), rgba(0, 102, 204, 0.6));
+    color: white;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+  
+  /* Glassy Card for Details */
+  .glassy-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.7));
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Job Details Text */
+  .job-details h6 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .job-details p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  /* Scrollbar Styling */
+  .job-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .job-list::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
+  
+  .job-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
