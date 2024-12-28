@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, NavDropdown, Container, Form } from 'react-bootstrap';
-import './Navbar.css'; // Importing the updated CSS
+import './navbar.css'; // Importing the updated CSS
 import { Link } from 'react-router-dom';
 
 

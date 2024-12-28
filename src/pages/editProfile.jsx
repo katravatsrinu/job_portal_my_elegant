@@ -116,15 +116,15 @@ const EditProfile = () => {
   };
 
   return (
-    <div className="profile-edit-container">
-      <h2 className="profile-heading">Edit Profile</h2>
+    <div className="container">
+      <h2 className="heading">Edit Profile</h2>
       {loading && <p className="loading-text">Loading...</p>}
       {error && <p className="error-message">{error}</p>}
       {success && <p className="success-message">{success}</p>}
 
       {!isEmailSubmitted ? (
-        <form onSubmit={handleEmailSubmit} className="email-input-form">
-          <label className="input-label">
+        <form onSubmit={handleEmailSubmit} className="form">
+          <label className="label">
             Email:
             <input
               type="email"
@@ -135,12 +135,12 @@ const EditProfile = () => {
               required
             />
           </label>
-          <button type="submit" className="submit-button">Submit</button>
+          <button type="submit" className="button">Submit</button>
           <p className="info-text">Enter your email to fetch or update your profile details.</p>
         </form>
       ) : (
-        <form onSubmit={handleSubmit} className="profile-input-form">
-          <label className="input-label">
+        <form onSubmit={handleSubmit} className="form">
+          <label className="label">
             Full Name:
             <input
               type="text"
@@ -151,7 +151,7 @@ const EditProfile = () => {
             />
           </label>
 
-          <label className="input-label">
+          <label className="label">
             Phone:
             <input
               type="text"
@@ -162,7 +162,7 @@ const EditProfile = () => {
             />
           </label>
 
-          <label className="input-label">
+          <label className="label">
             Work Experience:
             <input
               type="text"
@@ -173,7 +173,7 @@ const EditProfile = () => {
             />
           </label>
 
-          <label className="input-label">
+          <label className="label">
             Professional Summary:
             <textarea
               name="professionalSummary"
@@ -183,7 +183,7 @@ const EditProfile = () => {
             />
           </label>
 
-          <label className="input-label">
+          <label className="label">
             Skills:
             <select
               name="skill"
@@ -203,7 +203,7 @@ const EditProfile = () => {
             </select>
           </label>
 
-          <label className="input-label">
+          <label className="label">
             Achievements:
             <textarea
               name="achievements"
@@ -213,7 +213,7 @@ const EditProfile = () => {
             />
           </label>
 
-          <label className="input-label">
+          <label className="label">
             Certifications:
             <textarea
               name="certifications"
@@ -226,7 +226,7 @@ const EditProfile = () => {
           <fieldset className="education-fieldset">
             <legend className="education-legend">Education</legend>
 
-            <label className="input-label">
+            <label className="label">
               Tenth Grade:
               <input
                 type="text"
@@ -237,7 +237,7 @@ const EditProfile = () => {
               />
             </label>
 
-            <label className="input-label">
+            <label className="label">
               Intermediate:
               <input
                 type="text"
@@ -248,7 +248,7 @@ const EditProfile = () => {
               />
             </label>
 
-            <label className="input-label">
+            <label className="label">
               Graduation:
               <input
                 type="text"
@@ -260,7 +260,7 @@ const EditProfile = () => {
             </label>
           </fieldset>
 
-          <button type="submit" className="submit-button">Update Profile</button>
+          <button type="submit" className="button">Update Profile</button>
         </form>
       )}
     </div>
