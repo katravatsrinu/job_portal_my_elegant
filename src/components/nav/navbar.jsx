@@ -73,11 +73,11 @@ const NavBar = () => {
             <Nav.Link className="nav-link-custom" onClick={scrollToTop}>
               Home
             </Nav.Link>
-            <Nav.Link className="nav-link-custom">
+            {/* <Nav.Link className="nav-link-custom">
               <Link to="/Jobs" style={{ textDecoration: 'none', color: '#fff' }}>
                 Jobs
               </Link>
-            </Nav.Link>
+            </Nav.Link> */}
             {!token && (
               <>
                 <Nav.Link className="nav-link-custom">
@@ -113,9 +113,9 @@ const NavBar = () => {
                 <Form.Label className="upload-label">Upload Profile Picture</Form.Label>
                 <Form.Control type="file" accept="image/*" onChange={handleImageUpload} />
               </Form.Group>
-              <NavDropdown.Item href="#profile">View Profile</NavDropdown.Item>
+              <NavDropdown.Item href="#profile"><Link to="/viewProfile" style={{ textDecoration: 'none', color: '#00000' }}>View Profile</Link></NavDropdown.Item>
 
-              <NavDropdown.Item href="#profile"><Link to="/editProfile">Edit Profile</Link></NavDropdown.Item>
+              <NavDropdown.Item href="#profile"><Link to="/editProfile" style={{ textDecoration: 'none', color: '#00000' }}>Edit Profile</Link></NavDropdown.Item>
               {/* <NavDropdown.Item href="#settings">Settings</NavDropdown.Item> */}
               <NavDropdown.Item
                 href="#logout"

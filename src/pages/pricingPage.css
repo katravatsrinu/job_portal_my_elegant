@@ -1,0 +1,144 @@
+/* Overall container with a dark purple gradient background */
+.pricing-container {
+  background: linear-gradient(135deg, #3a0ca3, #7209b7, #f72585) !important;
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+/* Glassy Cards Styling */
+.card.plan-card {
+  border: none;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hover Effect with Shadow */
+.card.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Add subtle border for separation */
+.card.plan-card:hover {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Popular Badge Styling */
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  right: 15px;
+  background: #ff8800;
+  color: white;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+/* Title Styling */
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+/* Price Styling */
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+/* Features List */
+.features {
+  margin-top: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.features li {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.features li::before {
+  content: "✓";
+  color: #ffd700;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Button Styling */
+.btn {
+  background: #ff6f61;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.pricing-btn {
+  background: linear-gradient(135deg, #ff6f61, #ff3d2e); /* Red gradient */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.pricing-btn:hover {
+  background: linear-gradient(135deg, #ff3d2e, #d7261d); /* Darker hover effect */
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional Context-Specific Styling */
+.pricing-container .pricing-btn {
+  margin-top: auto; /* Ensures proper spacing in flex layouts */
+}
+
+/* Highlight for Most Popular */
+.most-popular .plan-card {
+  border: 2px solid #ffd700;
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.5);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pricing-container {
+    padding: 30px 15px;
+  }
+  .price {
+    font-size: 2rem;
+  }
+  .card-title {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,155 @@
+/* Pricing Section Background */
+.pricing-container {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6); /* Dark blue to bright blue gradient */
+    padding: 50px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin: 30px auto;
+    max-width: 1200px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Card Styling */
+  .card.plan-card {
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent glassy effect */
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition: all 0.3s ease;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  /* Specific Gradient for Each Plan */
+  .card.plan-card:nth-child(1) {
+    background: linear-gradient(135deg, #2193b0, #6dd5ed); /* Light blue gradient for Basic */
+  }
+  
+  .card.plan-card:nth-child(2) {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Orange gradient for Standard */
+  }
+  
+  .card.plan-card:nth-child(3) {
+    background: linear-gradient(135deg, #11998e, #38ef7d); /* Green gradient for Pro */
+  }
+  
+  /* Hover Effect with Shadow */
+  .card.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Add Subtle Border for Separation */
+  .card.plan-card:hover {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Popular Badge Styling */
+  .popular-badge {
+    position: absolute;
+    top: 15px; /* Bring it inside the card */
+    right: 15px;
+    background: #ff8800;
+    color: white;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+  
+  /* Title Styling */
+  .card-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    color: #fff;
+  }
+  
+  /* Price Styling */
+  .price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffd700; /* Gold for emphasis */
+    margin-bottom: 20px;
+  }
+  
+  /* Features List */
+  .features {
+    margin-top: 20px;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .features li {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .features li::before {
+    content: "✓";
+    color: #ffd700;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  /* Button Styling */
+  .btn {
+    background: #ff6f61;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #ff3d2e;
+    transform: scale(1.05);
+  }
+  
+  /* Highlight for Most Popular */
+  .most-popular .plan-card {
+    border: 2px solid #ffd700;
+    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.5);
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .pricing-container {
+      flex-direction: column;
+      padding: 30px 15px;
+      align-items: center;
+    }
+  
+    .card.plan-card {
+      margin-bottom: 20px;
+    }
+  
+    .price {
+      font-size: 2rem;
+    }
+  
+    .card-title {
+      font-size: 1.5rem;
+    }
+  }
+  

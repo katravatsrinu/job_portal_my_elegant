@@ -9,9 +9,11 @@ import CompanyLanding from './pages/companylanding';
 import PricingPage from './pages/pricingPage';
 import Jobpost from './pages/PostJob';
 import AllJobs from './pages/jobs/jobsSection';
-import EditProfileForm from './pages/editProfile';
-
-
+import EditProfile from './pages/editProfile';
+import ViewProfile from './pages/viewProfile';
+import Portfolio from './pages/portfolio';
+import FilteredJobs from './pages/filterdJobs';
+import JobDetail from './pages/jobDetails';
 
 
 
@@ -28,8 +30,15 @@ function App() {
         <Route path="/landing" element={<LandingPage/>}  />
         <Route path="/premium" element={<PricingPage/>}  />
         <Route path="/postJob" element={<Jobpost />}  />
-        <Route path="/jobs" element={<AllJobs />}  />
-        <Route path="/editProfile" element={<EditProfileForm />}  />
+        {/* <Route path="/jobs" element={<AllJobs />}  /> */}
+        <Route path="/editProfile" element={<EditProfile />}  />
+        <Route path="/viewProfile" element={<ViewProfile />}  />
+        <Route path="/login" element={<LoginRegister />}  />
+        <Route path="/job" element={<AllJobs />}  />
+        <Route path="/portfolio" element={<Portfolio />} /> 
+
+        <Route path="/jobs/filter" element={<FilteredJobs />} />
+        <Route path="/job/:jobSlug" element={<JobDetail />} />
 
 
       

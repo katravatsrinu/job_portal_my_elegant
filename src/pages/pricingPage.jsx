@@ -1,59 +1,78 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../pages/pricingPage.module.css"; // Custom CSS for additional styling
+import "./pricingPage.css";
 
 const PricingPage = () => {
+  const plans = [
+    {
+      tier: "Basic",
+      price: 99,
+      features: [
+        "Post 1 job listing",
+        "Basic company profile",
+        "Email support",
+        "30-day listing duration",
+        "Basic analytics",
+      ],
+    },
+    {
+      tier: "Standard",
+      price: 499,
+      features: [
+        "Post up to 5 job listings",
+        "Enhanced company profile",
+        "Priority email support",
+        "60-day listing duration",
+        "Advanced analytics",
+        "Featured listings",
+      ],
+      isPopular: true,
+    },
+    {
+      tier: "Pro",
+      price: 999,
+      features: [
+        "Unlimited job listings",
+        "Premium company profile",
+        "24/7 priority support",
+        "90-day listing duration",
+        "Full analytics suite",
+        "Access to all user profiles",
+        "Featured listings",
+        "Custom branding",
+      ],
+    },
+  ];
+
   return (
-    <div className="container py-5">
+    <div className="pricing-container container py-5">
       <h1 className="text-center mb-5">Choose Your Plan</h1>
       <div className="row justify-content-center">
-        {/* Base Plan */}
-        <div className="col-md-4 mb-4">
-          <div className="card plan-card">
-            <div className="card-body">
-              <h4 className="card-title text-center">Basic Plan</h4>
-              <p className="price text-center">₹99</p>
-              <ul className="list-unstyled">
-                <li>Post 1 Job</li>
-                <li>Access App</li>
-              </ul>
-              <button className="btn btn-primary btn-block">Choose Plan</button>
+        {plans.map((plan, index) => (
+          <div
+            className={`col-lg-4 col-md-6 mb-4 ${
+              plan.isPopular ? "most-popular" : ""
+            }`}
+            key={index}
+          >
+            <div className="card plan-card h-100">
+              <div className="card-body d-flex flex-column">
+                {plan.isPopular && (
+                  <span className="popular-badge">Most Popular</span>
+                )}
+                <h4 className="card-title text-center">{plan.tier}</h4>
+                <p className="price text-center">₹{plan.price}/month</p>
+                <ul className="features list-unstyled flex-grow-1">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex}>{feature}</li>
+                  ))}
+                </ul>
+                <button className="pricing-btn mt-3">
+                  Get Started
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* Standard Plan */}
-        <div className="col-md-4 mb-4">
-          <div className="card plan-card">
-            <div className="card-body">
-              <h4 className="card-title text-center">Standard Plan</h4>
-              <p className="price text-center">₹499</p>
-              <ul className="list-unstyled">
-                <li>Post 3 Jobs</li>
-                <li>Access App</li>
-                <li>View User Profiles</li>
-              </ul>
-              <button className="btn btn-primary btn-block">Choose Plan</button>
-            </div>
-          </div>
-        </div>
-
-        {/* Pro Plan */}
-        <div className="col-md-4 mb-4">
-          <div className="card plan-card">
-            <div className="card-body">
-              <h4 className="card-title text-center">Pro Plan</h4>
-              <p className="price text-center">₹999</p>
-              <ul className="list-unstyled">
-                <li>Post Unlimited Jobs</li>
-                <li>Access App</li>
-                <li>View All User Profiles</li>
-                <li>Advanced Features</li>
-              </ul>
-              <button className="btn btn-primary btn-block">Choose Plan</button>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

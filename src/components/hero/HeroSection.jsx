@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './HeroSection.css'; // Link to the CSS file
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -68,6 +69,9 @@ const HeroSection = () => {
 
       <div className="hero-content">
         <h1>Join a Thriving Industry – Real Estate Awaits You</h1>
+
+        {/* Add a new button below the h1 tag */}
+        <button className="explore-button" style={{textDecoration: "none",color:"fff" }}><Link to="/portfolio">Upload Portfolio</Link></button>
       </div>
     </div>
   );

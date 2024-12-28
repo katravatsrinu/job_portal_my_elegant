@@ -68,7 +68,7 @@ const HeroSection2 = () => {
 
       <div className="hero-content">
         <h1>Find Exceptional Talent – Build Your Dream Team</h1>
-        <button className="btn btn-primary mt-3">Hire Talents</button>
+        {/* <button className="btn btn-primary mt-3">Hire Talents</button> */}
       </div>
     </div>
   );

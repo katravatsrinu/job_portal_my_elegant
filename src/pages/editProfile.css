@@ -1,0 +1,156 @@
+/* Container for the EditProfile page */
+.edit-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  padding: 20px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading Style */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Form containers */
+.email-form, .profile-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Max width for larger screens */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adjusted gap for better spacing */
+}
+
+/* Form inputs, textareas, and selects */
+label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #4facfe; /* Blue highlight on focus */
+}
+
+textarea {
+  resize: vertical; /* Allow resizing vertically */
+  min-height: 120px; /* Slightly larger minimum height for textareas */
+}
+
+/* Submit and button styles */
+button {
+  padding: 12px 20px;
+  background-color: #4facfe;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #00c9fe;
+}
+
+/* Information and error messages */
+.info {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  font-weight: 600;
+  text-align: center;
+}
+
+.success {
+  color: green;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Education fieldset */
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .edit-profile-container {
+    padding: 10px;
+  }
+
+  .email-form, .profile-form {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  input, select, textarea {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .email-form, .profile-form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  input, select, textarea {
+    font-size: 0.85rem;
+  }
+
+  button {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+}
