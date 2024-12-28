@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './editProfile.css'; // Importing CSS styles
+// import './editProfile.css'; // Importing CSS styles
 
 const EditProfile = () => {
   const [email, setEmail] = useState('');
