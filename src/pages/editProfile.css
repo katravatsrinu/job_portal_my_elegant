@@ -1,5 +1,5 @@
 /* Container for the EditProfile page */
-.edit-profile-container {
+.profile-edit-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@
 }
 
 /* Heading Style */
-h2 {
+.profile-heading {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #333;
@@ -20,7 +20,7 @@ h2 {
 }
 
 /* Form containers */
-.email-form, .profile-form {
+.email-input-form, .profile-input-form {
   background: white;
   padding: 20px;
   border-radius: 8px;
@@ -30,39 +30,34 @@ h2 {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Adjusted gap for better spacing */
+  gap: 20px;
 }
 
 /* Form inputs, textareas, and selects */
-label {
+.input-label {
   font-size: 1rem;
   font-weight: 600;
   color: #666;
   margin-bottom: 5px;
 }
 
-input, select, textarea {
+.input-field, .textarea-field, .select-field {
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1rem;
   margin-bottom: 15px;
   width: 100%;
-  box-sizing: border-box; /* Ensures padding does not affect width */
+  box-sizing: border-box;
 }
 
-input:focus, select:focus, textarea:focus {
+.input-field:focus, .select-field:focus, .textarea-field:focus {
   outline: none;
-  border-color: #4facfe; /* Blue highlight on focus */
+  border-color: #4facfe;
 }
 
-textarea {
-  resize: vertical; /* Allow resizing vertically */
-  min-height: 120px; /* Slightly larger minimum height for textareas */
-}
-
-/* Submit and button styles */
-button {
+/* Submit button */
+.submit-button {
   padding: 12px 20px;
   background-color: #4facfe;
   color: white;
@@ -73,38 +68,31 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.submit-button:hover {
   background-color: #00c9fe;
 }
 
-/* Information and error messages */
-.info {
-  font-size: 0.9rem;
-  color: #555;
-  text-align: center;
-}
-
-.error {
+/* Error and Success messages */
+.error-message {
   color: red;
   font-weight: 600;
   text-align: center;
 }
 
-.success {
+.success-message {
   color: green;
   font-weight: 600;
   text-align: center;
 }
 
 /* Education fieldset */
-fieldset {
+.education-fieldset {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 15px;
-  margin-bottom: 20px;
 }
 
-legend {
+.education-legend {
   font-size: 1.2rem;
   font-weight: 600;
   color: #333;
@@ -112,44 +100,44 @@ legend {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .edit-profile-container {
+  .profile-edit-container {
     padding: 10px;
   }
 
-  .email-form, .profile-form {
+  .email-input-form, .profile-input-form {
     width: 90%;
     max-width: 400px;
   }
 
-  h2 {
+  .profile-heading {
     font-size: 1.8rem;
   }
 
-  input, select, textarea {
+  .input-field, .select-field, .textarea-field {
     font-size: 0.9rem;
   }
 
-  button {
+  .submit-button {
     font-size: 0.9rem;
     padding: 10px 18px;
   }
 }
 
 @media (max-width: 480px) {
-  .email-form, .profile-form {
+  .email-input-form, .profile-input-form {
     width: 100%;
     padding: 15px;
   }
 
-  h2 {
+  .profile-heading {
     font-size: 1.6rem;
   }
 
-  input, select, textarea {
+  .input-field, .select-field, .textarea-field {
     font-size: 0.85rem;
   }
 
-  button {
+  .submit-button {
     font-size: 0.85rem;
     padding: 8px 16px;
   }

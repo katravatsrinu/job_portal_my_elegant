@@ -116,74 +116,80 @@ const EditProfile = () => {
   };
 
   return (
-    <div className="edit-profile-container">
-      <h2>Edit Profile</h2>
-      {loading && <p>Loading...</p>}
-      {error && <p className="error">{error}</p>}
-      {success && <p className="success">{success}</p>}
+    <div className="profile-edit-container">
+      <h2 className="profile-heading">Edit Profile</h2>
+      {loading && <p className="loading-text">Loading...</p>}
+      {error && <p className="error-message">{error}</p>}
+      {success && <p className="success-message">{success}</p>}
 
       {!isEmailSubmitted ? (
-        <form onSubmit={handleEmailSubmit} className="email-form">
-          <label>
+        <form onSubmit={handleEmailSubmit} className="email-input-form">
+          <label className="input-label">
             Email:
             <input
               type="email"
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className="input-field"
               required
             />
           </label>
-          <button type="submit">Submit</button>
-          <p className="info">Enter your email to fetch or update your profile details.</p>
+          <button type="submit" className="submit-button">Submit</button>
+          <p className="info-text">Enter your email to fetch or update your profile details.</p>
         </form>
       ) : (
-        <form onSubmit={handleSubmit} className="profile-form">
-          <label>
+        <form onSubmit={handleSubmit} className="profile-input-form">
+          <label className="input-label">
             Full Name:
             <input
               type="text"
               name="fullName"
               value={profileData.fullName}
               onChange={handleChange}
+              className="input-field"
             />
           </label>
 
-          <label>
+          <label className="input-label">
             Phone:
             <input
               type="text"
               name="phone"
               value={profileData.phone}
               onChange={handleChange}
+              className="input-field"
             />
           </label>
 
-          <label>
+          <label className="input-label">
             Work Experience:
             <input
               type="text"
               name="workExperience"
               value={profileData.workExperience}
               onChange={handleChange}
+              className="input-field"
             />
           </label>
 
-          <label>
+          <label className="input-label">
             Professional Summary:
             <textarea
               name="professionalSummary"
               value={profileData.professionalSummary}
               onChange={handleChange}
+              className="textarea-field"
             />
           </label>
 
-          <label>
+          <label className="input-label">
             Skills:
             <select
               name="skill"
               value={profileData.skill}
               onChange={handleChange}
+              className="select-field"
             >
               <option value="">Select a skill</option>
               <option value="Head of Sales">Head of Sales</option>
@@ -197,59 +203,64 @@ const EditProfile = () => {
             </select>
           </label>
 
-          <label>
+          <label className="input-label">
             Achievements:
             <textarea
               name="achievements"
               value={profileData.achievements}
               onChange={handleChange}
+              className="textarea-field"
             />
           </label>
 
-          <label>
+          <label className="input-label">
             Certifications:
             <textarea
               name="certifications"
               value={profileData.certifications}
               onChange={handleChange}
+              className="textarea-field"
             />
           </label>
 
-          <fieldset>
-            <legend>Education</legend>
+          <fieldset className="education-fieldset">
+            <legend className="education-legend">Education</legend>
 
-            <label>
+            <label className="input-label">
               Tenth Grade:
               <input
                 type="text"
                 name="education.tenth"
                 value={profileData.education.tenth}
                 onChange={handleChange}
+                className="input-field"
               />
             </label>
 
-            <label>
+            <label className="input-label">
               Intermediate:
               <input
                 type="text"
                 name="education.inter"
                 value={profileData.education.inter}
                 onChange={handleChange}
+                className="input-field"
               />
             </label>
 
-            <label>
+            <label className="input-label">
               Graduation:
               <input
                 type="text"
                 name="education.graduate"
                 value={profileData.education.graduate}
                 onChange={handleChange}
+                className="input-field"
               />
             </label>
           </fieldset>
 
-          <button type="submit">Update Profile</button>
+          <button type="submit" className="submit-button">Update Profile</button>
         </form>
       )}
     </div>
